@@ -1,4 +1,4 @@
-# ATM-App
+ # ATM-App
 
 🏦 Flask ATM App
 
@@ -31,15 +31,6 @@ HTML5 / CSS3
 Bootstrap (for styling)
 
 Jinja2 (for templates)
-
-👥 Predefined Users
-Username	Initial Balance
-jatin	₹10000
-ronak	₹12000
-ankush	₹9500
-simran	₹8700
-deepak	₹10500
-reetu	₹11200
 
 💡 Future Improvements
 
