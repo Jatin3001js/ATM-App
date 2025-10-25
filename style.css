@@ -1,0 +1,134 @@
+/* ---------- GENERAL STYLE ---------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    color: #fff;
+}
+
+/* ---------- CENTERED CONTAINER ---------- */
+.container {
+    max-width: 450px;
+    margin: 100px auto;
+    padding: 30px;
+    background-color: rgba(0, 0, 0, 0.65);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0,0,0,0.5);
+    animation: fadeIn 1s ease-in;
+}
+
+/* ---------- HEADINGS ---------- */
+h1, h2, h3 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* ---------- INPUTS ---------- */
+input[type="text"], input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    text-align: center;
+}
+
+/* ---------- BUTTONS ---------- */
+button {
+    width: 90%;
+    max-width: 200px;
+    background-color: #ffd700;
+    color: black;
+    border: none;
+    padding: 12px 0;
+    margin: 10px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background-color: #fff;
+    transform: scale(1.05);
+}
+
+/* ---------- FLASH MESSAGE ---------- */
+.flash {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #28a745;
+    border-radius: 8px;
+    font-weight: bold;
+    color: white;
+    animation: flashAnim 1s ease;
+}
+
+/* ---------- ERROR MESSAGE ---------- */
+.error {
+    color: red;
+    margin-top: 10px;
+}
+
+/* ---------- TABLES ---------- */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    table-layout: fixed;
+}
+
+th, td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: center;
+    word-wrap: break-word;
+}
+
+th {
+    background: #3498db;
+    color: white;
+}
+
+.credit {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.debit {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.transfer {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+tr:hover {
+    transform: scale(1.02);
+    transition: 0.3s ease;
+}
+
+/* ---------- ANIMATIONS ---------- */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes flashAnim {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+}
+
+/* ---------- LINKS ---------- */
+a {
+    text-decoration: none;
+}
+
+a button {
+    display: inline-block;
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transaction History</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>📜 Transaction History - {{ name }}</h2>
+    <h3>Current Balance: ₹{{ balance }}</h3>
+
+    {% if history %}
+        <ul style="text-align:left;">
+        {% for h in history %}
+            <li>{{ h }}</li>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No transactions yet.</p>
+    {% endif %}
+
+    <a href="{{ url_for('dashboard') }}"><button>⬅️ Back</button></a>
+</div>
+</body>
+</html>

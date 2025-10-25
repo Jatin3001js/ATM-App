@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>Welcome, {{ name }} 👋</h2>
+    <h3>Current Balance: ₹{{ balance }}</h3>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+      {% if messages %}
+        {% for category, message in messages %}
+          <p class="flash">{{ message }}</p>
+        {% endfor %}
+      {% endif %}
+    {% endwith %}
+
+    <a href="{{ url_for('credit') }}"><button>💰 Credit</button></a><br>
+    <a href="{{ url_for('debit') }}"><button>💸 Debit</button></a><br>
+    <a href="{{ url_for('transfer') }}"><button>🔁 Transfer</button></a><br>
+    <a href="{{ url_for('balance') }}"><button>📊 Check Balance</button></a><br>
+    <a href="{{ url_for('history') }}"><button>📜 Transaction History</button></a><br>
+    <a href="{{ url_for('logout') }}"><button>🚪 Logout</button></a>
+</div>
+</body>
+</html>

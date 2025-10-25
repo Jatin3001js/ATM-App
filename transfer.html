@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Transfer Money</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="container">
+    <h2>🔁 Transfer Money</h2>
+    <h3>Current Balance: ₹{{ balance }}</h3>
+
+    <form method="POST">
+        <input type="text" name="recipient" placeholder="Recipient Name" required><br>
+        <input type="number" name="amount" placeholder="Amount" required><br>
+        <button type="submit">Transfer</button>
+    </form>
+
+    {% if error %}
+    <p class="error">{{ error }}</p>
+    {% endif %}
+
+    <a href="{{ url_for('dashboard') }}"><button>⬅️ Back</button></a>
+</div>
+</body>
+</html>
